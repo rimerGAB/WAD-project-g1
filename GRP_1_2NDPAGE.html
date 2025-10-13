@@ -1,0 +1,308 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apalit Schools</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(136deg, #e5e5e5, #000814);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #000814;
+      color: white;
+      text-align: center;
+      padding: 10px 0 18px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      letter-spacing: 0.6px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #cfcfcf;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav a.active {
+      color: #ffffff;
+      font-weight: 600;
+      border-bottom: 2px solid #5ece42;
+      padding-bottom: 2px;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+      transform: scale(1.06);
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      border-radius: 40px;
+      overflow: hidden;
+      width: 86%;
+      max-width: 400px;
+      margin: 12px auto 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      padding: 8px 14px;
+      width: 100%;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .search-bar button {
+      background-color: #0b2545;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 0 40px 40px 0;
+      margin-left: -2px;
+      transition: all 0.3s ease;
+    }
+
+    .search-bar button:hover {
+      background-color: #133e7c;
+    }
+
+    .school-section {
+      padding: 50px 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .school-section h2 {
+      color: #0b2545;
+      font-size: 1.6rem;
+      margin-bottom: 26px;
+      text-align: center;
+    }
+
+    .school-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 34px;
+    }
+
+    .school-card {
+      background-color: white;
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: all 0.34s ease;
+    }
+
+    .school-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .school-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .school-info {
+      padding: 24px;
+    }
+
+    .school-info h3 {
+      color: #0b2545;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #555;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    .location i {
+      color: #0b2545;
+    }
+
+    .school-info p {
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      background-color: #5ece42;
+      color: #ffffff;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    footer {
+      background-color: #000814;
+      color: #d6d6d6;
+      padding: 20px;
+      font-size: 0.85rem;
+      margin-top: 60px;
+    }
+
+    footer p {
+      background-color: #a0c9ac;
+      color: #ffffff;
+      padding: 20px;
+      margin: auto;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer ul li {
+      margin-bottom: 30px;
+    }
+
+    footer ul li a {
+      text-decoration: none;
+      color: #c7c7c7;
+      transition: color 0.3s ease;
+    }
+
+    footer ul li a:hover {
+      color: #5ece42;
+    }
+
+    
+  </style>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Apalit Schools</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#" class="active">Schools</a></li>
+        <li><a href="https://www.google.com/search?tbm=lcl&q=schools+near+apalit" target="_blank">Map</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search school or location...">
+    <button>Search</button>
+  </div>
+
+  <section class="school-section">
+    <h2>Apalit Pampanga Nearest Schools!</h2>
+    <div class="school-grid">
+
+      <div class="school-card">
+        <img src="https://paperchases.wordpress.com/wp-content/uploads/2015/06/lvcc.jpg" class="school-image" alt="Laverdad Christian College">
+        <div class="school-info">
+          <h3>Laverdad Christian College</h3>
+          <div class="location"><i class="fas fa-map-marker-alt"></i> Apalit, Pampanga</div>
+          <p>A non-sectarian and non-profit institution providing quality education rooted in biblical values and academic excellence.</p>
+          <span class="tag">Private</span>
+        </div>
+      </div>
+
+      <div class="school-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Jf1259Apalit_Pampanga_Market_Vicentefvf_01.JPG" class="school-image" alt="Saint Vincent Academy">
+        <div class="school-info">
+          <h3>Saint Vincent Academy</h3>
+          <div class="location"><i class="fas fa-map-marker-alt"></i> 1596 Gonzales Avenue, San Vicente, Apalit, Pampanga</div>
+          <p>A private school focused on nurturing well-rounded students through faith, discipline, and academic excellence.</p>
+          <span class="tag">Private</span>
+        </div>
+      </div>
+
+      <div class="school-card">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipN98EC92wY4ElxpJMBd7T2bZz1E8KKSL_QusJEH=s680-w680-h510-rw" class="school-image" alt="Maranatha Christian Academy of Apalit">
+        <div class="school-info">
+          <h3>Maranatha Christian Academy of Apalit</h3>
+          <div class="location"><i class="fas fa-map-marker-alt"></i> MacArthur Hwy, Sitio Control, Apalit, Pampanga</div>
+          <p>An institution built by God to reach students intellectually and spiritually, inspiring faith and knowledge.</p>
+          <span class="tag">Academy</span>
+        </div>
+      </div>
+
+      <div class="school-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Jf2043San_Juan_Dominican_School_Apalit_Pampangafvf_01.JPG/1280px-Jf2043San_Juan_Dominican_School_Apalit_Pampangafvf_01.JPG" class="school-image" alt="Dominican School of Apalit">
+        <div class="school-info">
+          <h3>Dominican School of Apalit</h3>
+          <div class="location"><i class="fas fa-map-marker-alt"></i> Plaza St., San Juan, Apalit, Pampanga</div>
+          <p>A Catholic institution offering quality education founded on faith, discipline, and a Christ-centered environment.</p>
+          <span class="tag">Private</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>This page was created to help you discover schools nearest to your area quickly and easily. With our interactive map, explore schools nearby, check accessibility, and compare options — making education more within your reach.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li>                   </li>
+          <li>Carl Ashton Mahusay</li>
+          <li>Leorenz Bien</li>
+          <li>Jimuel Jarina</li>
+          <li>Rimer Gabaleo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <center>© 2025 Group #1 WAD-PROJECT</center>
+    </div>
+  </footer>
+</body>
+</html>
